@@ -1,0 +1,58 @@
+.row {
+	display: flex;
+}
+
+.container {
+	width: 45%;
+	height: 45vh;
+	padding: 10px;
+	border-radius: 8px;
+}
+
+
+#myscreen {
+	width: 67%;
+	height: 70px;
+	font-size: 35px;
+	outline: none;
+	border: none;
+	text-align: right;
+	padding-right: .5em;
+	background: #ecf0f3;
+	border-radius: 6px;
+}
+
+.btns {
+	width: 100%;
+	margin-top: .2em;
+	display: flex;
+	justify-content: center;
+	
+	flex-direction: column;
+}
+
+.btns .row button {
+	width: 90px;
+	height: 40px;
+	background: #f1f3f4;
+	border: none;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 40;
+	cursor: pointer;
+	font-size: .9rem;
+	margin: 3px;
+}
+
+#equal {
+	background: #4285f4;
+	color: #ffffffff;
+	font-size: 1.4rem;
+}
+
+#other {
+	background: #dadce0;
+	color: #202124;
+}

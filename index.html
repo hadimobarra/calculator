@@ -1,0 +1,108 @@
+<!Doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+		<Link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<h1>Hello calculator</h1>
+		
+		<main>
+			<div class="container">
+				<div class="display">
+					<input id="myscreen" type="text" placeholder="0" />
+				</div>
+				<div class="btns">
+
+					<div class="row">
+						<button id="other" onclick="backspc()" >CE</button>
+						<button id="other" onclick="fact()" >X!</button>
+						<button id="other" class="btn">(</button>
+						<button id="other" class="btn">)</button>
+						<button id="other" class="btn">%</button>
+						<button id="other" onclick="screen.value=''" >AC</button>
+					</div>
+					<div class="row">
+						<button id="other" onclick="sin()" >sin</button>
+						<button id="other" onclick="pi()" >pi</button>
+						<button class="btn">7</button>
+						<button class="btn">8</button>
+						<button class="btn">9</button>
+						<button id="other" class="btn">/</button>
+					</div>
+					<div class="row">
+						<button id="other" onclick="cos()" >cos</button>
+						<button id="other" onclick="log()" >log</button>
+						<button class="btn">4</button>
+						<button class="btn">5</button>
+						<button class="btn">6</button>
+						<button id="other" class="btn">X</button>
+					</div>
+					<div class="row">
+						<button id="other" onclick="tan()" >tan</button>
+						<button id="other" onclick="sqrt()" >root</button>
+						<button class="btn">1</button>
+						<button class="btn">2</button>
+						<button class="btn">3</button>
+						<button id="other" class="btn">-</button>
+					</div>
+					<div class="row">
+						<button id="other" onclick="e()" >e</button>
+						<button id="other" onclick="pow()" >x^y</button>
+						<button class="btn">0</button>
+						<button class="btn">.</button>
+						<button id="equal" onclick="screen.value=eval(screen.value)">=</button>
+						<button id="other" class="btn">+</button>
+					</div>
+				<!--	
+					<div class="row">
+						<num-box  ><span slot="title" >CE</span></num-box>
+						<num-box  ><span slot="title" >X!</span></num-box>
+						<num-box  ><span slot="title" >(</span></num-box>
+						<num-box  ><span slot="title" >)</span></num-box>
+						<num-box  ><span slot="title" >%</span></num-box>
+						<num-box  ><span slot="title" >AC</span></num-box>
+					</div>
+					<div class="row">
+						<num-box  ><span slot="title" >sin</span></num-box>
+						<num-box  ><span slot="title" >pi</span></num-box>
+						<num-box  ><span slot="title" >7</span></num-box>
+						<num-box  ><span slot="title" >8</span></num-box>
+						<num-box  ><span slot="title" >9</span></num-box>
+						<num-box  ><span slot="title" >/</span></num-box>
+					</div>
+					<div class="row">
+						<num-box  ><span slot="title" >cos</span></num-box>
+						<num-box  ><span slot="title" >log</span></num-box>
+						<num-box  ><span slot="title" >4</span></num-box>
+						<num-box  ><span slot="title" >5</span></num-box>
+						<num-box  ><span slot="title" >6</span></num-box>
+						<num-box  ><span slot="title" >*</span></num-box>
+					</div>
+					<div class="row">
+						<num-box  ><span slot="title" >tan</span></num-box>
+						<num-box  ><span slot="title" >root</span></num-box>
+						<num-box  ><span slot="title" >1</span></num-box>
+						<num-box  ><span slot="title" >2</span></num-box>
+						<num-box  ><span slot="title" >3</span></num-box>
+						<num-box  ><span slot="title" >-</span></num-box>
+					</div>
+					<div class="row">
+						<num-box  ><span slot="title" >e</span></num-box>
+						<num-box  ><span slot="title" >x^y</span></num-box>
+						<num-box  ><span slot="title" >0</span></num-box>
+						<num-box  ><span slot="title" >.</span></num-box>
+						<num-box  ><span slot="title" >=</span></num-box>
+						<num-box  ><span slot="title" >+</span></num-box>
+					</div>
+				-->
+
+				</div>
+			</div>
+		</main>
+
+	<script src="./custom-components/rectangle.js"></script>
+	<script src="./script.js"></script>
+	</body>
+</html>
