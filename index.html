@@ -15,7 +15,7 @@
 				</div>
 				<div class="btns">
 
-					<div class="row">
+					<!-- <div class="row">
 						<button id="other" onclick="backspc()" >CE</button>
 						<button id="other" onclick="fact()" >X!</button>
 						<button id="other" class="btn">(</button>
@@ -54,51 +54,49 @@
 						<button class="btn">.</button>
 						<button id="equal" onclick="screen.value=eval(screen.value)">=</button>
 						<button id="other" class="btn">+</button>
-					</div>
-				<!--	
+					</div> -->
+					
 					<div class="row">
-						<num-box  ><span slot="title" >CE</span></num-box>
-						<num-box  ><span slot="title" >X!</span></num-box>
-						<num-box  ><span slot="title" >(</span></num-box>
-						<num-box  ><span slot="title" >)</span></num-box>
-						<num-box  ><span slot="title" >%</span></num-box>
-						<num-box  ><span slot="title" >AC</span></num-box>
-					</div>
-					<div class="row">
-						<num-box  ><span slot="title" >sin</span></num-box>
-						<num-box  ><span slot="title" >pi</span></num-box>
-						<num-box  ><span slot="title" >7</span></num-box>
-						<num-box  ><span slot="title" >8</span></num-box>
-						<num-box  ><span slot="title" >9</span></num-box>
-						<num-box  ><span slot="title" >/</span></num-box>
+						<num-box text="CE" onclick="backspc()"></num-box>
+						<num-box text="X!" onclick="fact()"></num-box>
+						<num-box text="("></num-box>
+						<num-box text=")"></num-box>
+						<num-box text="%"></num-box>
+						<num-box text="AC" onclick="screen.value=''"></num-box>
 					</div>
 					<div class="row">
-						<num-box  ><span slot="title" >cos</span></num-box>
-						<num-box  ><span slot="title" >log</span></num-box>
-						<num-box  ><span slot="title" >4</span></num-box>
-						<num-box  ><span slot="title" >5</span></num-box>
-						<num-box  ><span slot="title" >6</span></num-box>
-						<num-box  ><span slot="title" >*</span></num-box>
+						<num-box text="sin" onclick="sin()"></num-box>
+						<num-box text="pi" onclick="pi()"></num-box>
+						<num-box text="7"></num-box>
+						<num-box text="8"></num-box>
+						<num-box text="9"></num-box>
+						<num-box text="/"></num-box>
 					</div>
 					<div class="row">
-						<num-box  ><span slot="title" >tan</span></num-box>
-						<num-box  ><span slot="title" >root</span></num-box>
-						<num-box  ><span slot="title" >1</span></num-box>
-						<num-box  ><span slot="title" >2</span></num-box>
-						<num-box  ><span slot="title" >3</span></num-box>
-						<num-box  ><span slot="title" >-</span></num-box>
+						<num-box text="cos" onclick="cos()"></num-box>
+						<num-box text="log" onclick="log()"></num-box>
+						<num-box text="4"></num-box>
+						<num-box text="5"></num-box>
+						<num-box text="6"></num-box>
+						<num-box text="*"></num-box>
 					</div>
 					<div class="row">
-						<num-box  ><span slot="title" >e</span></num-box>
-						<num-box  ><span slot="title" >x^y</span></num-box>
-						<num-box  ><span slot="title" >0</span></num-box>
-						<num-box  ><span slot="title" >.</span></num-box>
-						<num-box  ><span slot="title" >=</span></num-box>
-						<num-box  ><span slot="title" >+</span></num-box>
+						<num-box text="tan" onclick="tan()"></num-box>
+						<num-box text="root" onclick="sqrt()"></num-box>
+						<num-box text="1"></num-box>
+						<num-box text="2"></num-box>
+						<num-box text="3"></num-box>
+						<num-box text="-"></num-box>
 					</div>
-				-->
-
-				</div>
+					<div class="row">
+						<num-box text="e" onclick="e()"></num-box>
+						<num-box text="x^y" onclick="pow()"></num-box>
+						<num-box text="0"></num-box>
+						<num-box text="."></num-box>
+						<num-box text="=" onclick="screen.value=eval(screen.value)"></num-box>
+						<num-box text="+"></num-box>
+					</div>
+					</div>
 			</div>
 		</main>
 
