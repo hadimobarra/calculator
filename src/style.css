@@ -9,8 +9,61 @@
 	border-radius: 8px;
 }
 
+#open-his {
+	width: min-content;
+	height: max-content;
+	padding: 10px;
+	position: absolute;
+	background: inherit;
+	z-index: 100;
+	text-align: left;
+	font-size: .8rem;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+
+#history {
+	width: 100px;
+	height: max-content;
+	padding: 10px;
+	position: absolute;
+	background: white;
+	z-index: 100;
+	text-align: left;
+	font-size: 1rem;
+	border-radius: 10px;
+	transform: translateY(25px);
+	
+}
+
+
+#his-input {
+	text-align: right;
+	background: #ecf0f3;
+	border: none;
+	outline: none;
+	position: absolute;
+	right: 12px;
+	top: 5px;
+}
+
 
 #myscreen {
+	background: #ecf0f3;
+	width: min-content;
+	height: min-content;
+	border: none;
+	outline: none;
+	position: absolute;
+	right: 12px;
+	bottom: 15px;
+	font-size: 1.3rem;
+	text-align: right;
+}
+
+.display {
+	display: block;
 	width: 67%;
 	height: 70px;
 	font-size: 35px;
@@ -20,6 +73,7 @@
 	padding-right: .5em;
 	background: #ecf0f3;
 	border-radius: 6px;
+	position: relative;
 }
 
 .btns {

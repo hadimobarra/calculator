@@ -6,11 +6,13 @@
 		<Link rel="stylesheet" href="./style.css" />
 	</head>
 	<body>
-		<h1>Hello calculator</h1>
-		
+		<h1>Hello calculator</h1>	
 		<main>
 			<div class="container">
 				<div class="display">
+					<div id="open-his" onclick="toggle()" >History</div>
+					<div id="history">wefewf</div>
+					<input type="text" id="his-input" placeholder=" " />
 					<input id="myscreen" type="text" placeholder="0" />
 				</div>
 				<div class="btns">
@@ -52,10 +54,10 @@
 						<button id="other" onclick="pow()" >x^y</button>
 						<button class="btn">0</button>
 						<button class="btn">.</button>
-						<button id="equal" onclick="screen.value=eval(screen.value)">=</button>
+						<button id="equal" onclick="equal()">=</button>
 						<button id="other" class="btn">+</button>
 					</div>
-				<!--	
+<!--
 					<div class="row">
 						<num-box  ><span slot="title" >CE</span></num-box>
 						<num-box  ><span slot="title" >X!</span></num-box>
@@ -96,12 +98,13 @@
 						<num-box  ><span slot="title" >=</span></num-box>
 						<num-box  ><span slot="title" >+</span></num-box>
 					</div>
-				-->
+-->	
 
 				</div>
 			</div>
 		</main>
 
 	<script src="./custom-components/rectangle.js"></script>
+	<script src="./index.js"></script>
 	</body>
 </html>

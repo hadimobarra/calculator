@@ -1,41 +1,85 @@
+'use strict'
 
 var screen = document.querySelector('#myscreen');
+var rightHistory = document.querySelector('#his-input');
 var btn =  document.querySelectorAll('.btn');
+var showHistory = document.getElementById("history");
 
-for (item of btn) {
+
+let arr = [];
+let operators = ['+', '-', 'X', '/', '(', ')', '%'];
+let history = [];
+
+for (let item of btn) {
 	item.addEventListener('click', (e) => {
-		btntext = e.target.innerText;
-		if (btntext == 'X') {
-			btntext = '*'
+		let screenValue = screen.value.split('=');
+		if (screenValue[0] == 'Ans') {
+			rightHistory.value = screen.value;
+			screen.value = '';
 		}
-		screen.value += btntext;
+		arr.push(e.target.innerText);
+		for (let i = 0; i <= arr.length; i++) {
+			for (let j = 0; j <= operators.length; j++) {
+				if (arr[i] == operators[j] && arr[i-1] == operators[j] ) {
+					arr.pop();
+					return
+				}
+			}
+		}
+		let btntext = e.target.innerText;
+		if (btntext == 'X') {
+		btntext = '*'
+		}
+		screen.value += btntext;		
 	})
 }
 
+showHistory.style.display = "none";
+function toggle() {
+	if (showHistory.style.display === "none") {
+		showHistory.style.display = "block";
+	} else if (showHistory.style.display === "block") {
+		showHistory.style.display = "none";
+	}
+}
+
+
+function equal() {
+	console.log('history: ', history) 
+	rightHistory.value = screen.value + '=';
+	let newAnswer = eval(screen.value);
+	if (history.slice(-1) != newAnswer) {
+		history.push(newAnswer);
+	}
+	screen.value = 'Ans= ' + newAnswer;
+//	showHistory.value = history.slice(-1);
+	console.log('n An: ', history)
+}
+
 function sin() {
-	screen.value = Math.sin(screen.value);
+	screen.value = 'Ans= ' + Math.sin(screen.value);
 }
 
 function cos() {
-	screen.value = Math.cos(screen.value);
+	screen.value = 'Ans= ' + Math.cos(screen.value);
 }
 
 
 function tan() {
-	screen.value = Math.tan(screen.value);
+	screen.value = 'Ans= ' + Math.tan(screen.value);
 }
 
 function pow() {
-	screen.value = Math.pow(screen.value, 2);
+	screen.value = 'Ans= ' + Math.pow(screen.value, 2);
 }
 
 
 function sqrt() {
-	screen.value = Math.sqrt(screen.value, 2);
+	screen.value = 'Ans= ' + Math.sqrt(screen.value, 2);
 }
 
 function log() {
-	screen.value = Math.log(screen.value);
+	screen.value = 'Ans= ' + Math.log(screen.value);
 }
 
 function pi() {
@@ -54,7 +98,7 @@ function fact() {
 	}
 	i -= 1;
 
-	screen.value = f;
+	screen.value = 'Ans= ' + f;
 }
 
 function backspc() {
