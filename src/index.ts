@@ -1,6 +1,9 @@
 import * as _ from 'lodash';
 import './style.css'
 
+function salam(){
+	alert("test");
+}
 const screen: HTMLInputElement = document.querySelector('#myscreen');
 const rightHistory: HTMLInputElement  = document.querySelector('#his-input');
 const btn: NodeListOf<HTMLElement> =  document.querySelectorAll('.btn');
@@ -34,7 +37,7 @@ for(var i = 0, item; item = btn[i] ; i++){
 		screen.value += btntext;		
 	})
 }
-
+console.log("hello!")
 showHistory.style.display = "none";
 function toggle(): void {
 	if (showHistory.style.display === "none") {
@@ -86,6 +89,55 @@ function pi(): void {
 	screen.value = "3.14159265359";
 }
 
-function e(): void {
+function efunc(): void {
 	screen.value = "2.71828182846";
 }
+
+// const backspcKey: HTMLElement = document.getElementById("backspcKey");
+// backspcKey.addEventListener('click', (e) => {
+// 	backspcKey();
+// });
+// const factKey: HTMLElement = document.getElementById("sin");
+// factKey.addEventListener('click', (e) => {
+// 	fact();
+// });
+const sinKey: HTMLElement = document.getElementById("sin");
+sinKey.addEventListener('click', (e) => {
+	sin();
+});
+const piKey: HTMLElement = document.getElementById("pi");
+piKey.addEventListener('click', (e) => {
+	pi();
+});
+const cosKey: HTMLElement = document.getElementById("cos");
+cosKey.addEventListener('click', (e) => {
+	cos();
+});
+const logKey: HTMLElement = document.getElementById("log");
+logKey.addEventListener('click', (e) => {
+	log();
+});
+const tanKey: HTMLElement = document.getElementById("tan");
+tanKey.addEventListener('click', (e) => {
+	tan();
+});
+
+const sqrtKey: HTMLElement = document.getElementById("sqrt");
+sqrtKey.addEventListener('click', (e) => {
+	sqrt();
+});
+
+const eKey: HTMLElement = document.getElementById("e");
+eKey.addEventListener('click', (e) => {
+	efunc();
+});
+
+const powKey: HTMLElement = document.getElementById("pow");
+powKey.addEventListener('click', (e) => {
+	pow();
+});
+
+const equalKey: HTMLElement = document.getElementById("equal");
+equalKey.addEventListener('click', (e) => {
+	equal();
+});
