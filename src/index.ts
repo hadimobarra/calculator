@@ -37,7 +37,7 @@ for(var i = 0, item; item = btn[i] ; i++){
 		screen.value += btntext;		
 	})
 }
-console.log("hello!")
+
 showHistory.style.display = "none";
 function toggle(): void {
 	if (showHistory.style.display === "none") {
